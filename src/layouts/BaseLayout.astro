@@ -1,0 +1,124 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Alert Energy - Expert energy consulting since 2014. Regulated benchmarking, energy accounting, auditing, and full building lifecycle services." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="font-body text-navy-800 bg-white antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-navy-100 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-navy-800 rounded-lg flex items-center justify-center">
+          <span class="text-amber-400 font-heading font-bold text-lg">A</span>
+        </div>
+        <div>
+          <span class="font-heading font-bold text-xl text-navy-800 tracking-tight">Alert Energy</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="/" class="text-sm font-medium text-navy-600 hover:text-navy-800 transition-colors">Home</a>
+        <a href="/benchmarking" class="text-sm font-medium text-navy-600 hover:text-navy-800 transition-colors">Benchmarking</a>
+        <a href="/about" class="text-sm font-medium text-navy-600 hover:text-navy-800 transition-colors">About</a>
+        <a href="/contact" class="inline-flex items-center px-5 py-2.5 bg-amber-600 text-white text-sm font-semibold rounded-lg hover:bg-amber-700 transition-colors">
+          Book a Review
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-navy-600" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-navy-100 bg-white">
+      <div class="px-6 py-4 space-y-3">
+        <a href="/" class="block text-sm font-medium text-navy-600 hover:text-navy-800">Home</a>
+        <a href="/benchmarking" class="block text-sm font-medium text-navy-600 hover:text-navy-800">Benchmarking</a>
+        <a href="/about" class="block text-sm font-medium text-navy-600 hover:text-navy-800">About</a>
+        <a href="/contact" class="block text-center px-5 py-2.5 bg-amber-600 text-white text-sm font-semibold rounded-lg hover:bg-amber-700">
+          Book a Review
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-[72px]">
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy-800 text-white">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-4 gap-10">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 bg-amber-600 rounded-lg flex items-center justify-center">
+              <span class="text-white font-heading font-bold text-lg">A</span>
+            </div>
+            <span class="font-heading font-bold text-lg">Alert Energy</span>
+          </div>
+          <p class="text-navy-300 text-sm leading-relaxed max-w-md">
+            Institutional-grade energy consulting for buildings that matter.
+            Serving property owners, utilities, and engineering firms since 2014.
+          </p>
+          <p class="text-navy-400 text-xs mt-4">Optimizing Energy Since 2014</p>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-navy-300 mb-4">Services</h4>
+          <ul class="space-y-2 text-sm text-navy-300">
+            <li><a href="/benchmarking" class="hover:text-white transition-colors">Regulated Benchmarking</a></li>
+            <li><a href="/benchmarking#cities" class="hover:text-white transition-colors">City Compliance</a></li>
+            <li><a href="/about#services" class="hover:text-white transition-colors">Energy Accounting</a></li>
+            <li><a href="/about#services" class="hover:text-white transition-colors">Auditing & Commissioning</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-navy-300 mb-4">Get In Touch</h4>
+          <ul class="space-y-2 text-sm text-navy-300">
+            <li><a href="/contact" class="hover:text-white transition-colors">Book a Review</a></li>
+            <li><a href="mailto:info@alertenergy.net" class="hover:text-white transition-colors">info@alertenergy.net</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-navy-700 mt-12 pt-8 text-center text-navy-400 text-xs">
+        &copy; {new Date().getFullYear()} Alert Energy. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

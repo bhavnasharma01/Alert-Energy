@@ -1,0 +1,234 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Book a Compliance Review - Alert Energy" description="Get in touch with Alert Energy. Book a 15-minute compliance review for your building's energy benchmarking needs.">
+
+  <!-- HERO -->
+  <section class="bg-navy-800 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <p class="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">Get Started</p>
+        <h1 class="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+          Book Your Compliance Review
+        </h1>
+        <p class="text-navy-200 text-lg leading-relaxed">
+          Tell us about your building and your compliance needs. We will get back to you within
+          one business day with a clear picture of where you stand and how we can help.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM + INFO -->
+  <section class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-5 gap-12">
+
+        <!-- Form -->
+        <div class="lg:col-span-3">
+          <form id="contact-form" class="space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-navy-700 mb-2">Full Name *</label>
+                <input type="text" id="name" name="name" required
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors"
+                  placeholder="Jane Smith" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-navy-700 mb-2">Email *</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors"
+                  placeholder="jane@company.com" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label for="phone" class="block text-sm font-medium text-navy-700 mb-2">Phone</label>
+                <input type="tel" id="phone" name="phone"
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors"
+                  placeholder="(555) 123-4567" />
+              </div>
+              <div>
+                <label for="company" class="block text-sm font-medium text-navy-700 mb-2">Company / Property Name</label>
+                <input type="text" id="company" name="company"
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors"
+                  placeholder="Acme Properties" />
+              </div>
+            </div>
+
+            <div>
+              <label for="city" class="block text-sm font-medium text-navy-700 mb-2">Building Location *</label>
+              <select id="city" name="city" required
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors bg-white">
+                <option value="">Select your city</option>
+                <option value="dc">Washington, D.C.</option>
+                <option value="chicago">Chicago, IL</option>
+                <option value="denver">Denver, CO</option>
+                <option value="vancouver">Vancouver, BC</option>
+                <option value="toronto">Toronto, ON</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+              <div>
+                <label for="building-size" class="block text-sm font-medium text-navy-700 mb-2">Building Size (sq ft)</label>
+                <select id="building-size" name="building_size"
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors bg-white">
+                  <option value="">Select range</option>
+                  <option value="under-25k">Under 25,000 sq ft</option>
+                  <option value="25k-50k">25,000 - 50,000 sq ft</option>
+                  <option value="50k-100k">50,000 - 100,000 sq ft</option>
+                  <option value="100k-250k">100,000 - 250,000 sq ft</option>
+                  <option value="250k-500k">250,000 - 500,000 sq ft</option>
+                  <option value="over-500k">Over 500,000 sq ft</option>
+                </select>
+              </div>
+              <div>
+                <label for="compliance-status" class="block text-sm font-medium text-navy-700 mb-2">Current Compliance Status</label>
+                <select id="compliance-status" name="compliance_status"
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors bg-white">
+                  <option value="">Select status</option>
+                  <option value="first-time">First-time filer</option>
+                  <option value="filed-before">Filed before, need help this year</option>
+                  <option value="unsure">Not sure if previous filings are accurate</option>
+                  <option value="overdue">Behind on compliance / overdue</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-navy-700 mb-2">Tell Us More</label>
+              <textarea id="message" name="message" rows="4"
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors resize-y"
+                placeholder="Any details about your building, your timeline, or questions you have..."></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors text-lg">
+              Submit & Book a Call
+            </button>
+
+            <p class="text-navy-400 text-xs">
+              We will respond within one business day. Your information is kept confidential.
+            </p>
+          </form>
+
+          <!-- Success message (hidden by default) -->
+          <div id="form-success" class="hidden bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+            <svg class="w-12 h-12 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 class="font-heading text-xl font-bold text-green-800 mb-2">Thank You!</h3>
+            <p class="text-green-700 mb-4">We have received your information and will be in touch within one business day.</p>
+            <p class="text-green-600 text-sm">Want to get started sooner? Book a call directly:</p>
+            <a href="#calendly" class="inline-flex items-center mt-3 px-6 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors">
+              Schedule a 15-Minute Call
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar Info -->
+        <div class="lg:col-span-2 space-y-8">
+          <!-- Quick Contact -->
+          <div class="bg-slate-50 rounded-xl p-8 border border-slate-100">
+            <h3 class="font-heading text-lg font-bold text-navy-800 mb-4">Prefer to Reach Out Directly?</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-amber-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <p class="text-navy-500 text-sm">Email</p>
+                  <a href="mailto:info@alertenergy.net" class="text-navy-800 font-medium hover:text-amber-600 transition-colors">info@alertenergy.net</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- What to Expect -->
+          <div class="bg-slate-50 rounded-xl p-8 border border-slate-100">
+            <h3 class="font-heading text-lg font-bold text-navy-800 mb-4">What to Expect</h3>
+            <div class="space-y-4">
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-amber-600 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">1</div>
+                <p class="text-navy-600 text-sm">We review your submission and research your jurisdiction's specific requirements.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-amber-600 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">2</div>
+                <p class="text-navy-600 text-sm">A 15-minute call to discuss your building, timeline, and any concerns.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-amber-600 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">3</div>
+                <p class="text-navy-600 text-sm">You receive a clear proposal with scope, timeline, and pricing -- no surprises.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deadline Reminder -->
+          <div class="bg-amber-50 rounded-xl p-8 border border-amber-200">
+            <h3 class="font-heading text-lg font-bold text-navy-800 mb-3">Upcoming Deadlines</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-navy-600">Washington, D.C.</span>
+                <span class="font-semibold text-amber-700">May 1, 2026</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-navy-600">Chicago, IL</span>
+                <span class="font-semibold text-amber-700">June 1, 2026</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-navy-600">Denver, CO</span>
+                <span class="font-semibold text-amber-700">June 1, 2026</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-navy-600">Vancouver, BC</span>
+                <span class="font-semibold text-amber-700">June 1, 2026</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-navy-600">Toronto, ON</span>
+                <span class="font-semibold text-amber-700">July 1, 2026</span>
+              </div>
+            </div>
+            <p class="text-amber-800 text-xs mt-4 font-medium">Do not wait until the last minute. Start the process early.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDLY SECTION -->
+  <section id="calendly" class="bg-slate-50 py-20 border-t border-slate-200">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-navy-800 mb-3">Schedule a Call Directly</h2>
+      <p class="text-navy-500 mb-8">Pick a time that works for you. Our compliance reviews take about 15 minutes.</p>
+
+      <!-- Calendly placeholder -->
+      <div class="bg-white rounded-xl border-2 border-dashed border-slate-300 p-12">
+        <p class="text-navy-400 text-sm mb-2">Calendly embed goes here</p>
+        <p class="text-navy-300 text-xs">Replace this with your Calendly scheduling widget:<br/>
+          <code class="text-xs bg-slate-100 px-2 py-1 rounded">&lt;div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_LINK"&gt;&lt;/div&gt;</code>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<script>
+  // Simple form handling with success state
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+
+  form?.addEventListener('submit', async (e) => {
+    // If using Formspree, let it handle the submission naturally
+    // For a custom handler, uncomment below:
+    // e.preventDefault();
+    // const data = new FormData(form);
+    // await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    // form.classList.add('hidden');
+    // success?.classList.remove('hidden');
+  });
+</script>
