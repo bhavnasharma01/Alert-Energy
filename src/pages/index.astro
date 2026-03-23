@@ -1,12 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+// Calculate days remaining dynamically from today's date
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+function daysUntil(dateStr: string): number {
+  const target = new Date(dateStr);
+  target.setHours(0, 0, 0, 0);
+  return Math.ceil((target.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+}
+
 const deadlines = [
-  { city: "Washington, D.C.", date: "May 1, 2026", regulation: "BEPS Compliance", daysLeft: 39 },
-  { city: "Chicago, IL", date: "June 1, 2026", regulation: "Energy Benchmarking Ordinance", daysLeft: 70 },
-  { city: "Denver, CO", date: "June 1, 2026", regulation: "Energize Denver", daysLeft: 70 },
-  { city: "Vancouver, BC", date: "June 1, 2026", regulation: "Building Benchmark BC", daysLeft: 70 },
-  { city: "Toronto, ON", date: "July 1, 2026", regulation: "EWRB / EGPS", daysLeft: 100 },
+  { city: "Washington, D.C.", date: "May 1, 2026", regulation: "BEPS Compliance", daysLeft: daysUntil("2026-05-01") },
+  { city: "Chicago, IL", date: "June 1, 2026", regulation: "Energy Benchmarking Ordinance", daysLeft: daysUntil("2026-06-01") },
+  { city: "Denver, CO", date: "June 1, 2026", regulation: "Energize Denver", daysLeft: daysUntil("2026-06-01") },
+  { city: "Vancouver, BC", date: "June 1, 2026", regulation: "Building Benchmark BC", daysLeft: daysUntil("2026-06-01") },
+  { city: "Toronto, ON", date: "July 1, 2026", regulation: "EWRB / EGPS", daysLeft: daysUntil("2026-07-01") },
 ];
 ---
 
@@ -56,9 +66,15 @@ const deadlines = [
             <p class="text-navy-800 font-semibold text-sm mb-1">{d.city}</p>
             <p class="text-amber-600 font-heading text-2xl font-bold mb-1">{d.date}</p>
             <p class="text-navy-400 text-xs">{d.regulation}</p>
-            <div class="mt-3 inline-block px-3 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full">
-              ~{d.daysLeft} days left
-            </div>
+            {d.daysLeft > 0 ? (
+              <div class="mt-3 inline-block px-3 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full">
+                {d.daysLeft} {d.daysLeft === 1 ? 'day' : 'days'} left
+              </div>
+            ) : (
+              <div class="mt-3 inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-semibold rounded-full">
+                Deadline passed
+              </div>
+            )}
           </div>
         ))}
       </div>

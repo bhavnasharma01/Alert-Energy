@@ -1,6 +1,7 @@
 {
   "name": "alert-energy-site",
   "version": "1.0.0",
+  "build": 2,
   "type": "module",
   "scripts": {
     "dev": "astro dev",
