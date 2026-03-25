@@ -5,10 +5,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Get in Touch - Alert Energy" description="Get in touch with Alert Energy. Book a 15-minute call to discuss your building's regulated benchmarking and energy management needs.">
 
   <!-- HERO -->
-  <section class="bg-navy-800 py-20">
+  <section class="bg-navy-700 py-20">
     <div class="max-w-6xl mx-auto px-6">
       <div class="max-w-3xl">
-        <p class="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">Get in Touch</p>
+        <p class="text-warm-400 font-semibold text-sm uppercase tracking-widest mb-4">Get in Touch</p>
         <h1 class="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
           Let's talk about your building.
         </h1>
@@ -32,13 +32,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <div>
                 <label for="name" class="block text-sm font-medium text-navy-700 mb-2">Full Name *</label>
                 <input type="text" id="name" name="name" required
-                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors"
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-navy-400 focus:border-navy-400 outline-none transition-colors"
                   placeholder="Jane Smith" />
               </div>
               <div>
                 <label for="email" class="block text-sm font-medium text-navy-700 mb-2">Email *</label>
                 <input type="email" id="email" name="email" required
-                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors"
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-navy-400 focus:border-navy-400 outline-none transition-colors"
                   placeholder="jane@company.com" />
               </div>
             </div>
@@ -47,13 +47,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <div>
                 <label for="phone" class="block text-sm font-medium text-navy-700 mb-2">Phone</label>
                 <input type="tel" id="phone" name="phone"
-                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors"
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-navy-400 focus:border-navy-400 outline-none transition-colors"
                   placeholder="(555) 123-4567" />
               </div>
               <div>
                 <label for="company" class="block text-sm font-medium text-navy-700 mb-2">Company / Property Name</label>
                 <input type="text" id="company" name="company"
-                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors"
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-navy-400 focus:border-navy-400 outline-none transition-colors"
                   placeholder="Acme Properties" />
               </div>
             </div>
@@ -61,7 +61,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div>
               <label for="city" class="block text-sm font-medium text-navy-700 mb-2">Building Location *</label>
               <select id="city" name="city" required
-                class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors bg-white">
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-navy-400 focus:border-navy-400 outline-none transition-colors bg-white">
                 <option value="">Select your city</option>
                 <option value="dc">Washington, D.C.</option>
                 <option value="chicago">Chicago, IL</option>
@@ -76,7 +76,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <div>
                 <label for="building-size" class="block text-sm font-medium text-navy-700 mb-2">Building Size (sq ft)</label>
                 <select id="building-size" name="building_size"
-                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors bg-white">
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-navy-400 focus:border-navy-400 outline-none transition-colors bg-white">
                   <option value="">Select range</option>
                   <option value="under-25k">Under 25,000 sq ft</option>
                   <option value="25k-50k">25,000 - 50,000 sq ft</option>
@@ -89,7 +89,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <div>
                 <label for="compliance-status" class="block text-sm font-medium text-navy-700 mb-2">Benchmarking Compliance Status</label>
                 <select id="compliance-status" name="compliance_status"
-                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors bg-white">
+                  class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-navy-400 focus:border-navy-400 outline-none transition-colors bg-white">
                   <option value="">Select status</option>
                   <option value="first-time">First-time filer</option>
                   <option value="filed-before">Filed before, need help this year</option>
@@ -102,12 +102,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div>
               <label for="message" class="block text-sm font-medium text-navy-700 mb-2">Tell Us More</label>
               <textarea id="message" name="message" rows="4"
-                class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition-colors resize-y"
+                class="w-full px-4 py-3 border border-slate-300 rounded-lg text-navy-800 focus:ring-2 focus:ring-navy-400 focus:border-navy-400 outline-none transition-colors resize-y"
                 placeholder="Any details about your building, your timeline, or questions you have..."></textarea>
             </div>
 
             <button type="submit"
-              class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors text-lg">
+              class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-navy-500 text-white font-semibold rounded-lg hover:bg-navy-600 transition-colors text-lg">
               Submit & Book a Call
             </button>
 
@@ -124,7 +124,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3 class="font-heading text-xl font-bold text-green-800 mb-2">Thank You!</h3>
             <p class="text-green-700 mb-4">We have received your information and will be in touch within one business day.</p>
             <p class="text-green-600 text-sm">Want to get started sooner? Book a call directly:</p>
-            <a href="#calendly" class="inline-flex items-center mt-3 px-6 py-3 bg-amber-600 text-white font-semibold rounded-lg hover:bg-amber-700 transition-colors">
+            <a href="#calendly" class="inline-flex items-center mt-3 px-6 py-3 bg-navy-500 text-white font-semibold rounded-lg hover:bg-navy-600 transition-colors">
               Schedule a 15-Minute Call
             </a>
           </div>
@@ -137,12 +137,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3 class="font-heading text-lg font-bold text-navy-800 mb-4">Rather just send us an email?</h3>
             <div class="space-y-4">
               <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-amber-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 text-navy-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 <div>
                   <p class="text-navy-500 text-sm">Email</p>
-                  <a href="mailto:info@alertenergy.net" class="text-navy-800 font-medium hover:text-amber-600 transition-colors">info@alertenergy.net</a>
+                  <a href="mailto:info@alertenergy.net" class="text-navy-800 font-medium hover:text-navy-500 transition-colors">info@alertenergy.net</a>
                 </div>
               </div>
             </div>
@@ -153,46 +153,46 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3 class="font-heading text-lg font-bold text-navy-800 mb-4">Here's what happens next</h3>
             <div class="space-y-4">
               <div class="flex items-start gap-3">
-                <div class="w-6 h-6 bg-amber-600 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">1</div>
+                <div class="w-6 h-6 bg-navy-500 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">1</div>
                 <p class="text-navy-600 text-sm">We read through what you have sent and look into your city's specific rules.</p>
               </div>
               <div class="flex items-start gap-3">
-                <div class="w-6 h-6 bg-amber-600 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">2</div>
+                <div class="w-6 h-6 bg-navy-500 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">2</div>
                 <p class="text-navy-600 text-sm">A quick 15-minute call to chat about your building, your timeline, and any questions.</p>
               </div>
               <div class="flex items-start gap-3">
-                <div class="w-6 h-6 bg-amber-600 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">3</div>
+                <div class="w-6 h-6 bg-navy-500 text-white text-xs font-bold rounded-full flex items-center justify-center shrink-0 mt-0.5">3</div>
                 <p class="text-navy-600 text-sm">You get a straightforward proposal with scope, timeline, and pricing. No surprises.</p>
               </div>
             </div>
           </div>
 
           <!-- Deadline Reminder -->
-          <div class="bg-amber-50 rounded-xl p-8 border border-amber-200">
+          <div class="bg-warm-50 rounded-xl p-8 border border-warm-100">
             <h3 class="font-heading text-lg font-bold text-navy-800 mb-3">Benchmarking Deadlines</h3>
             <div class="space-y-2 text-sm">
               <div class="flex justify-between">
                 <span class="text-navy-600">Washington, D.C.</span>
-                <span class="font-semibold text-amber-700">May 1, 2026</span>
+                <span class="font-semibold text-warm-700">May 1, 2026</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-navy-600">Chicago, IL</span>
-                <span class="font-semibold text-amber-700">June 1, 2026</span>
+                <span class="font-semibold text-warm-700">June 1, 2026</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-navy-600">Denver, CO</span>
-                <span class="font-semibold text-amber-700">June 1, 2026</span>
+                <span class="font-semibold text-warm-700">June 1, 2026</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-navy-600">Vancouver, BC</span>
-                <span class="font-semibold text-amber-700">June 1, 2026</span>
+                <span class="font-semibold text-warm-700">June 1, 2026</span>
               </div>
               <div class="flex justify-between">
                 <span class="text-navy-600">Toronto, ON</span>
-                <span class="font-semibold text-amber-700">July 1, 2026</span>
+                <span class="font-semibold text-warm-700">July 1, 2026</span>
               </div>
             </div>
-            <p class="text-amber-800 text-xs mt-4 font-medium">The earlier you start, the smoother it goes. Reach out anytime.</p>
+            <p class="text-warm-700 text-xs mt-4 font-medium">The earlier you start, the smoother it goes. Reach out anytime.</p>
           </div>
         </div>
       </div>
